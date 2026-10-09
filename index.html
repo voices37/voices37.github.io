@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Тест по теме государственных электронных сервисов и услуг" />
+  <title>Тест: электронные государственные услуги</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #677489;
+      --accent: #2563eb;
+      --accent2: #1d4ed8;
+      --border: #dbe3ef;
+      --good: #15803d;
+      --good-bg: #ecfdf3;
+      --bad: #b91c1c;
+      --bad-bg: #fef2f2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .wrap {
+      width: min(860px, calc(100% - 28px));
+      margin: 36px auto 60px;
+    }
+
+    header {
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(28px, 5vw, 42px);
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .question {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 14px 0;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+    }
+
+    .question h2 {
+      margin: 0 0 14px;
+      font-size: 18px;
+    }
+
+    label {
+      display: block;
+      padding: 11px 12px;
+      margin: 8px 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: .15s ease;
+    }
+
+    label:hover {
+      border-color: #aebbd0;
+      background: #f8fafc;
+    }
+
+    input[type="radio"] {
+      margin-right: 9px;
+      accent-color: var(--accent);
+    }
+
+    .correct {
+      border-color: #86efac !important;
+      background: var(--good-bg) !important;
+    }
+
+    .wrong {
+      border-color: #fecaca !important;
+      background: var(--bad-bg) !important;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    button {
+      border: 0;
+      border-radius: 11px;
+      padding: 12px 18px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    #checkBtn {
+      background: var(--accent);
+      color: white;
+    }
+
+    #checkBtn:hover { background: var(--accent2); }
+
+    #resetBtn {
+      background: #e8eef8;
+      color: var(--text);
+    }
+
+    #result {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      font-size: 18px;
+    }
+
+    #result strong {
+      font-size: 28px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Государственные электронные сервисы и услуги</h1>
+      <p class="subtitle">10 вопросов. Выберите один вариант ответа в каждом вопросе и нажмите «Проверить».</p>
+    </header>
+
+    <form id="quiz">
+      <section class="question" data-answer="b">
+        <h2>1. Что такое электронное государство (e-government)?</h2>
+        <label><input type="radio" name="q1" value="a"> Система электронного голосования</label>
+        <label><input type="radio" name="q1" value="b"> Модель взаимодействия власти и граждан, где услуги и обмен информацией происходят в цифровом виде</label>
+        <label><input type="radio" name="q1" value="c"> Только сайт для оплаты налогов</label>
+        <label><input type="radio" name="q1" value="d"> Система внутреннего документооборота школ</label>
+      </section>
+
+      <section class="question" data-answer="c">
+        <h2>2. Какова главная цель перехода к электронному государству?</h2>
+        <label><input type="radio" name="q2" value="a"> Полностью отменить бумажные документы</label>
+        <label><input type="radio" name="q2" value="b"> Заменить все государственные учреждения приложениями</label>
+        <label><input type="radio" name="q2" value="c"> Сделать бюрократию прозрачной, быстрой и удобной</label>
+        <label><input type="radio" name="q2" value="d"> Перевести все услуги только на платную основу</label>
+      </section>
+
+      <section class="question" data-answer="a">
+        <h2>3. Через какую систему осуществляется доступ к порталу «Госуслуги»?</h2>
+        <label><input type="radio" name="q3" value="a"> ЕСИА</label>
+        <label><input type="radio" name="q3" value="b"> СМЭВ</label>
+        <label><input type="radio" name="q3" value="c"> ФИС ФРДО</label>
+        <label><input type="radio" name="q3" value="d"> ГИБДД</label>
+      </section>
+
+      <section class="question" data-answer="d">
+        <h2>4. Что можно сделать через «Госуслуги»?</h2>
+        <label><input type="radio" name="q4" value="a"> Только посмотреть штрафы</label>
+        <label><input type="radio" name="q4" value="b"> Только записаться к врачу</label>
+        <label><input type="radio" name="q4" value="c"> Только оформить загранпаспорт</label>
+        <label><input type="radio" name="q4" value="d"> Проверить результаты ЕГЭ, подать документы в вуз и пользоваться другими государственными услугами</label>
+      </section>
+
+      <section class="question" data-answer="b">
+        <h2>5. Для чего нужен личный кабинет налогоплательщика?</h2>
+        <label><input type="radio" name="q5" value="a"> Для проверки дипломов</label>
+        <label><input type="radio" name="q5" value="b"> Для просмотра начислений, их оплаты и получения налоговых вычетов</label>
+        <label><input type="radio" name="q5" value="c"> Для подачи заявления на загранпаспорт</label>
+        <label><input type="radio" name="q5" value="d"> Для регистрации школьного аттестата</label>
+      </section>
+
+      <section class="question" data-answer="c">
+        <h2>6. Что хранится в ФИС ФРДО?</h2>
+        <label><input type="radio" name="q6" value="a"> Данные о штрафах ГИБДД</label>
+        <label><input type="radio" name="q6" value="b"> Медицинские карты граждан</label>
+        <label><input type="radio" name="q6" value="c"> Данные о выданных в России дипломах и сертификатах</label>
+        <label><input type="radio" name="q6" value="d"> Пароли от портала «Госуслуги»</label>
+      </section>
+
+      <section class="question" data-answer="a">
+        <h2>7. В чём одно из главных преимуществ электронных государственных услуг?</h2>
+        <label><input type="radio" name="q7" value="a"> Многие услуги доступны круглосуточно без необходимости стоять в очередях</label>
+        <label><input type="radio" name="q7" value="b"> Все государственные услуги становятся бесплатными</label>
+        <label><input type="radio" name="q7" value="c"> Пользователю больше никогда не нужны документы</label>
+        <label><input type="radio" name="q7" value="d"> Государственные учреждения перестают существовать</label>
+      </section>
+
+      <section class="question" data-answer="d">
+        <h2>8. Что даёт принцип «одного окна» и работа через СМЭВ?</h2>
+        <label><input type="radio" name="q8" value="a"> Все обращения автоматически одобряются</label>
+        <label><input type="radio" name="q8" value="b"> Можно пользоваться услугами без подтверждения личности</label>
+        <label><input type="radio" name="q8" value="c"> Пользователь сам переносит документы между ведомствами</label>
+        <label><input type="radio" name="q8" value="d"> Ведомства могут запрашивать нужные данные друг у друга электронно</label>
+      </section>
+
+      <section class="question" data-answer="b">
+        <h2>9. Почему электронное заявление снижает риск ошибок?</h2>
+        <label><input type="radio" name="q9" value="a"> Ошибки автоматически скрываются</label>
+        <label><input type="radio" name="q9" value="b"> Многие данные автоматически подтягиваются из подтверждённого профиля ЕСИА</label>
+        <label><input type="radio" name="q9" value="c"> Заявление проверяет другой пользователь</label>
+        <label><input type="radio" name="q9" value="d"> В электронных заявлениях нельзя вводить текст вручную</label>
+      </section>
+
+      <section class="question" data-answer="c">
+        <h2>10. Как правильно поступить, если кто-то по телефону просит назвать код из СМС от «Госуслуг»?</h2>
+        <label><input type="radio" name="q10" value="a"> Назвать код, если человек представился сотрудником банка</label>
+        <label><input type="radio" name="q10" value="b"> Назвать только половину кода</label>
+        <label><input type="radio" name="q10" value="c"> Не сообщать код: такой запрос является признаком мошенничества</label>
+        <label><input type="radio" name="q10" value="d"> Отправить код в ответном СМС</label>
+      </section>
+
+      <div class="actions">
+        <button id="checkBtn" type="submit">Проверить</button>
+        <button id="resetBtn" type="button">Пройти заново</button>
+      </div>
+    </form>
+
+    <div id="result" aria-live="polite"></div>
+  </main>
+
+  <script>
+    const quiz = document.getElementById('quiz');
+    const result = document.getElementById('result');
+    const resetBtn = document.getElementById('resetBtn');
+
+    quiz.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const questions = [...document.querySelectorAll('.question')];
+      let score = 0;
+      let answered = 0;
+
+      questions.forEach((question, index) => {
+        const answer = question.dataset.answer;
+        const selected = question.querySelector('input[type="radio"]:checked');
+
+        question.querySelectorAll('label').forEach(label => {
+          label.classList.remove('correct', 'wrong');
+        });
+
+        if (selected) {
+          answered++;
+          const selectedLabel = selected.closest('label');
+          if (selected.value === answer) {
+            score++;
+            selectedLabel.classList.add('correct');
+          } else {
+            selectedLabel.classList.add('wrong');
+            const correctInput = question.querySelector(`input[value="${answer}"]`);
+            correctInput.closest('label').classList.add('correct');
+          }
+        }
+      });
+
+      if (answered < questions.length) {
+        result.style.display = 'block';
+        result.innerHTML = `<strong>Заполнено: ${answered}/10</strong>
+          Ответьте на все вопросы, после этого можно получить итоговый результат.`;
+        result.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      const percent = Math.round(score / questions.length * 100);
+      let message = '';
+
+      if (score === 10) message = 'Отлично — всё правильно.';
+      else if (score >= 8) message = 'Очень хороший результат.';
+      else if (score >= 6) message = 'Нормально, но есть что повторить.';
+      else if (score >= 4) message = 'Стоит ещё раз пройти материал.';
+      else message = 'Лучше перечитать материал и попробовать снова.';
+
+      result.style.display = 'block';
+      result.innerHTML = `<strong>${score}/10 — ${percent}%</strong>${message}
+        <div class="note">Зелёным отмечены правильные ответы, красным — выбранные неправильные.</div>`;
+      result.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    resetBtn.addEventListener('click', () => {
+      quiz.reset();
+      document.querySelectorAll('label').forEach(label => {
+        label.classList.remove('correct', 'wrong');
+      });
+      result.style.display = 'none';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
